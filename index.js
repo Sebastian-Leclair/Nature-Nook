@@ -1,6 +1,17 @@
 const express = require("express");
-const app = express();
 const path = require("path");
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://127.0.0.1:27017/nature-nook");
+
+const db = mongoose.connection;
+
+db.on("error", console.error.bind(console, "CONNECTION ERROR:"));
+db.once("open", () => {
+    console.log("DATABASE CONNECTED");
+});
+
+const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
