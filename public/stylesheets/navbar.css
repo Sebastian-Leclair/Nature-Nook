@@ -20,6 +20,28 @@ body {
     flex-direction: column;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    padding: 15px;
+    margin: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid white;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
 footer {
     background: var(--background);
     text-align: center;
