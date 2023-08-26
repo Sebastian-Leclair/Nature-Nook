@@ -2,8 +2,10 @@
 <div class="grid">
   <% for (let campground of allCampgrounds) { %>
   <div class="card">
-    <img src="<%= campground.image %>" alt="campground image" />
-    <a href="/campgrounds/<%=campground._id%>"> <%= campground.title %> </a>
+    <a class="view" href="/campgrounds/<%=campground._id%>">
+      <img src="<%= campground.image %>" alt="campground image" />
+      <p><%=campground.title%></p>
+    </a>
   </div>
   <% }; %>
 </div>
