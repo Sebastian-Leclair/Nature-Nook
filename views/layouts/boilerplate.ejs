@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/hello.js"></script>
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
     <title>BOILERPLATE!!!!</title>
   </head>
   <body>
-    <h1>NAVBAR</h1>
-    <%- body %>
-    <h1>FOOTER</h1>
+    <div id="container">
+      <%- include("../partials/navbar") %>
+      <div id="content"><%- body %></div>
+      <%-include("../partials/footer") %>
+    </div>
   </body>
 </html>
