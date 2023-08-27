@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(40, 40, 40);
 }
 
 #container {
@@ -10,9 +10,17 @@ body {
 }
 
 .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+.grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     padding: 0px;
+}
 }
 
 .card {
@@ -21,7 +29,7 @@ body {
     padding: 0px;
     margin: 10px;
     border-radius: 5px;
-    color: white;
+    color: black;
     align-items: center;
     height: 20rem;
     width: 20rem;
@@ -37,11 +45,12 @@ body {
     align-items: center;
     height: 20rem;
     width: 20rem;
+    text-decoration: none;
 }
 
 
 img {
     width: 80%;
-    height: 60%;
+    height: 80%;
     border-radius: 10px;
 }
